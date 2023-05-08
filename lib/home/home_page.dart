@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool isFulsun = false;
   bool isDayMood = true;
-  Duration duration = const Duration(seconds: 3);
+  Duration duration = const Duration(seconds: 5);
 
   Future<void> changeMode(int value) async {
     await Future.delayed(duration);
@@ -43,12 +43,12 @@ class _HomePageState extends State<HomePage> {
     List<Color> lightColors = [
       const Color(0xFF8C248A),
       const Color(0xFFCE5870),
-      const Color(0xFFFF9485),
+      const Color(0xFFd4f542),
       if (isFulsun) const Color(0xFFFF9089)
     ];
 
     List<Color> darkColors = [
-      const Color(0xFF0D1441),
+      const Color(0xFF4251f5),
       const Color(0xFF283584),
       const Color(0xFF376AB2),
     ];
@@ -111,8 +111,8 @@ class _HomePageState extends State<HomePage> {
                   labelStyle: const TextStyle(
                       fontSize: 20, fontWeight: FontWeight.w600),
                   tabs: const [
-                    Tab(text: 'Кун'),
-                    Tab(text: 'Тун'),
+                    Tab(text: 'day'),
+                    Tab(text: 'night'),
                   ],
                 ),
               ),
